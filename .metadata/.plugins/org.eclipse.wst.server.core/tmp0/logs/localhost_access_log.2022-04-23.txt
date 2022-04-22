@@ -332,3 +332,13 @@
 0:0:0:0:0:0:0:1 - - [23/Apr/2022:03:27:40 +0530] "POST /FlayAway/HomePageServlet HTTP/1.1" 200 1650
 0:0:0:0:0:0:0:1 - - [23/Apr/2022:03:27:42 +0530] "GET /FlayAway/Login.jsp?flightno=3720 HTTP/1.1" 200 1309
 0:0:0:0:0:0:0:1 - - [23/Apr/2022:03:27:47 +0530] "POST /FlayAway/LoginServlet HTTP/1.1" 200 42
+0:0:0:0:0:0:0:1 - - [23/Apr/2022:03:28:06 +0530] "POST /FlayAway/LoginServlet HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [23/Apr/2022:03:28:06 +0530] "GET /FlayAway/Payment.jsp HTTP/1.1" 200 3250
+0:0:0:0:0:0:0:1 - - [23/Apr/2022:03:28:22 +0530] "POST /FlayAway/BookingDetails.jsp HTTP/1.1" 200 2309
+0:0:0:0:0:0:0:1 - - [23/Apr/2022:03:29:01 +0530] "GET /FlayAway/logout HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [23/Apr/2022:03:29:03 +0530] "GET /FlayAway/adminlogin.jsp HTTP/1.1" 200 387
+0:0:0:0:0:0:0:1 - - [23/Apr/2022:03:29:11 +0530] "POST /FlayAway/AdminloginServlet HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [23/Apr/2022:03:29:11 +0530] "GET /FlayAway/adminlogin.jsp HTTP/1.1" 200 387
+0:0:0:0:0:0:0:1 - - [23/Apr/2022:03:29:25 +0530] "POST /FlayAway/AdminloginServlet HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [23/Apr/2022:03:29:25 +0530] "GET /FlayAway/AdminHome.jsp HTTP/1.1" 200 1035
+0:0:0:0:0:0:0:1 - - [23/Apr/2022:03:29:27 +0530] "GET /FlayAway/Places.jsp HTTP/1.1" 200 631
