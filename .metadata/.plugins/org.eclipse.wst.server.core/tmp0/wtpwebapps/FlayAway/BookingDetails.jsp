@@ -111,12 +111,14 @@ try {
 		 <div>
 		  <h2><u>Flight Booking Details</u></h2>
 		  <table>
+		  <tr><th align="right">Arline Name : </th><td><%=rs.getString("airline_name")%></td></tr>
 		  <tr><th align="right">Flight No. : </th><td><%=rs.getString("flightno")%></td></tr>
 		  <tr><th align="right">Origin : </th><td><%=rs.getString("origin")%></td></tr>
 		  <tr><th align="right">Destination : </th><td><%=rs.getString("destination")%></td></tr>
 		  <tr><th align="right">Departure Time : </th><td><%=rs.getString("departure_time")%></td></tr>
 		  <tr><th align="right">Arrival Time : </th><td><%=rs.getString("arrival_time")%></td></tr>
 		  <tr><th align="right">Fare : </th><td><%=rs.getString("fare")%></td></tr>
+		   <tr><th align="right">Price : </th><td><%=rs.getString("ticket_price")%></td></tr>
 		  </table>
 		 </div>
 

@@ -65,12 +65,15 @@ a{
 	<h2>* Available flights are here *</h2>
 		<table>
 			<tr>
+			<th>Airlines Name</th>
 				<th>Flight no</th>
 				<th>Origin</th>
 				<th>Destination</th>
 				<th>Departure Time</th>
 				<th>Arrival Time</th>
-				<th>Fare</th><th></th>
+				<th>Fare</th>
+				<th>Price</th><th></th>
+				
 			</tr>
 
 	
@@ -105,6 +108,7 @@ a{
 			session.setAttribute("fare", rs.getString("fare"));
 			session.setAttribute("departure_time",  rs.getString("departure_time"));
 			session.setAttribute("arrival_time",rs.getString("arrival_time"));
+			
 
 	%>
 			<%-- 	
@@ -123,12 +127,14 @@ a{
 </tr>
 	 --%>
 			<tr>
+			    <td><%= rs.getString("airline_name") %></td>
 				<td><%= rs.getString("flightno") %></td>
 				<td><%= rs.getString("origin")%></td>
 				<td><%= rs.getString("destination")%></td>
 				<td><%= rs.getString("departure_time")%></td>
 				<td><%= rs.getString("arrival_time")%></td>
 				<td><%= rs.getString("fare")%></td>
+				<td><%= rs.getString("ticket_price") %></td>
 				
 				<td> <a href="Login.jsp?flightno=<%= rs.getString("flightno") %>"><b>Book Now</b></a></td>
 				

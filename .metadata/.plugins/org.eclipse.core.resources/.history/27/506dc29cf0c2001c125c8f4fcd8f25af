@@ -71,9 +71,8 @@ a{
 				<th>Destination</th>
 				<th>Departure Time</th>
 				<th>Arrival Time</th>
-				<th>Fare</th>
-				<th>Price</th><th></th>
-				
+				<th>Fare</th><th></th>
+				<th>Price</th>
 			</tr>
 
 	
@@ -134,7 +133,7 @@ a{
 				<td><%= rs.getString("departure_time")%></td>
 				<td><%= rs.getString("arrival_time")%></td>
 				<td><%= rs.getString("fare")%></td>
-				<td><%= rs.getString("ticket_price") %></td>
+				<td><%= rs.getString("price") %></td>
 				
 				<td> <a href="Login.jsp?flightno=<%= rs.getString("flightno") %>"><b>Book Now</b></a></td>
 				

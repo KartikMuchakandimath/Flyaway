@@ -1,7 +1,8 @@
-<%@page import="java.sql.ResultSet"%>
+
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.SQLException"%>
 <%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -16,7 +17,7 @@ margin : 0;
 padding : 0;
 }
 .head{
-background-color : #000;
+background-color : #0000FF;
 color : #fff;
 height : 50px;
 }
@@ -81,15 +82,16 @@ tr:nth-child(odd){border-bottom : 1px solid #ccc;}
 Object s=session.getAttribute("flightno");
 
 
-String url="jdbc:mysql://localhost:3306/flyaway";
+/*String url="jdbc:mysql://localhost:3306/flyaway";
 String  username="root";
-String password="root";
+String password="root";*/
 try {
-	Class.forName("com.mysql.cj.jdbc.Driver");
-	Connection connection=DriverManager.getConnection(url,username,password);
+	Class.forName("com.mysql.jdbc.Driver");
+	Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flyaway", "root", "root");
+
 	
-	String sqlQuery="select * from flightdetails where flightno=?";
-	  PreparedStatement pstmt=connection.prepareStatement(sqlQuery);
+	//String sqlQuery="select * from flightdetails where flightno=?";
+	  PreparedStatement pstmt=connection.prepareStatement("select * from flightdetails where flightno=?");
 	  
 	//  pstmt.setString(1, no);
 	pstmt.setObject(1, s);
@@ -115,6 +117,7 @@ try {
 		  <tr><th align="right">Departure Time : </th><td><%=rs.getString("departure_time")%></td></tr>
 		  <tr><th align="right">Arrival Time : </th><td><%=rs.getString("arrival_time")%></td></tr>
 		  <tr><th align="right">Fare : </th><td><%=rs.getString("fare")%></td></tr>
+		   <tr><th align="right">Price : </th><td><%=rs.getString("price")%></td></tr>
 		  </table>
 		 </div>
 
